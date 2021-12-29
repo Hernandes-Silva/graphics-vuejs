@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <LineGraphic :datat="data_bar" />
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import LineGraphic from './components/LineGraphic.vue'
+import BestProducts from './service/best_selling'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LineGraphic
+  },
+  data() {
+    return {
+      data_bar: []
+    }
+  },
+  mounted(){
+    BestProducts.listar().then(response =>{
+      console.log(response)
+      this.data_bar = response.data
+    })
   }
+
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
