@@ -1,12 +1,11 @@
 <template>
   <div>
-    <h1>Alou</h1>
+    <h1>bagui é doido</h1>
   </div>
-  <router-view />
 </template>
 
 <script>
 export default {
-  name: "App",
-};
+    name: 'CreateOrder'
+}
 </script>
