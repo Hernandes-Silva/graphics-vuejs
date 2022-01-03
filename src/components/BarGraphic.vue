@@ -1,5 +1,7 @@
 <template>
-  <svg width="600" height="500"></svg>
+  <div>
+    <svg width="600" height="500"></svg>
+  </div>
 </template>
 
 <script>
@@ -99,5 +101,9 @@ export default {
 <style>
 .bar {
   fill: steelblue;
+}
+.main{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
 }
 </style>

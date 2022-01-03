@@ -8,10 +8,12 @@ const router = createRouter({
     routes: [
         {
           path: "/",
+          name:'Home',
           component: Home,
         },
         {
-          path: "/contact",
+          path: "/order/create/",
+          name:'CreateOrder',
           component: CreateOrder,
         },
     ]

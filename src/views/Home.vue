@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <BarGraphic :datat="data_bar" />
+  <div class="main">
     <div>
-      <LineGraphic :datat="data_line" />
+      <BarGraphic :datat="data_bar" />
+    </div>
+    <div>
+      <LineGraphic :datat="data_line" title="Pedidos do ano" />
     </div>
   </div>
 </template>
 
 <script>
-import BarGraphic from "../components/BarGraphic.vue"
+import BarGraphic from "../components/BarGraphic.vue";
 import BestProducts from "../service/best_selling";
 import OrdersYear from "../service/orders_year";
 import LineGraphic from "../components/LineGraphic.vue";
@@ -34,3 +36,9 @@ export default {
   },
 };
 </script>
+<style>
+.main{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+}
+</style>

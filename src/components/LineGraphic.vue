@@ -1,5 +1,7 @@
 <template>
-  <svg id="line_chart" width="600" height="500"></svg>
+
+  <h2 class="title">{{ title }}</h2>
+  <svg id="line_chart" width="100%" height="500" class="test" ref="line_chart"></svg>
 </template>
 
 <script>
@@ -9,6 +11,9 @@ export default {
   props:{
     datat:{
       type: Array
+    },
+    title:{
+      type: String
     }
   },
   methods: {
@@ -16,7 +21,7 @@ export default {
       var datat = this.datat
 
       var margin = { top: 10, right: 30, bottom: 30, left: 60 },
-        width = 460 - margin.left - margin.right,
+        width = this.$refs.line_chart.clientWidth - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
       // append the svg object to the body of the page
@@ -174,3 +179,11 @@ export default {
 
 };
 </script>
+
+<style scoped>
+.title{
+  
+  text-align: center;
+}
+
+</style>

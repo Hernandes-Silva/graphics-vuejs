@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>bagui é doido</h1>
+    <h1>Fazer um pedido</h1>
   </div>
 </template>
 
